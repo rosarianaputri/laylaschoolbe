@@ -1,0 +1,24 @@
+﻿<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007bff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Book Icon -->
+  <rect x="10" y="15" width="30" height="35" rx="2" fill="url(#logoGradient)"/>
+  <rect x="12" y="17" width="26" height="31" rx="1" fill="white"/>
+  <line x1="16" y1="22" x2="34" y2="22" stroke="url(#logoGradient)" stroke-width="2"/>
+  <line x1="16" y1="27" x2="34" y2="27" stroke="url(#logoGradient)" stroke-width="2"/>
+  <line x1="16" y1="32" x2="34" y2="32" stroke="url(#logoGradient)" stroke-width="2"/>
+  <line x1="16" y1="37" x2="28" y2="37" stroke="url(#logoGradient)" stroke-width="2"/>
+  
+  <!-- Graduation Cap -->
+  <path d="M25 10 L40 18 L25 26 L10 18 Z" fill="url(#logoGradient)"/>
+  <path d="M25 26 L25 32 C25 32 30 34 35 32 C40 30 40 28 40 28 L40 18" fill="url(#logoGradient)"/>
+  
+  <!-- Text -->
+  <text x="50" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Layla</text>
+  <text x="50" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#007bff">School</text>
+</svg>

@@ -5,7 +5,8 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Admin\SitePageController;
 use App\Http\Controllers\Admin\PpdbController as AdminPpdbController;
 use App\Http\Controllers\Admin\SiteSettingController;
-use App\Http\Controllers\PpdbController;
+use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\frontend\PpdbController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\AdminStudentLifeController;
@@ -30,7 +31,7 @@ Route::get('/contact', [FrontendController::class, 'page'])->defaults('slug', 'c
 Route::get('/ppdb', [PpdbController::class, 'index'])->name('front.ppdb');
 Route::get('/ppdb/formulir', [PpdbController::class, 'create'])->name('front.ppdb.form');
 Route::post('/ppdb/formulir', [PpdbController::class, 'store'])->name('front.ppdb.store');
-
+Route::get('/ppdb/search', [PpdbController::class, 'search'])->name('front.ppdb.search');
 
 // News article routes
 Route::get('/news-liblary', function () {
@@ -111,6 +112,9 @@ Route::prefix('admin')->name('admin.')->group(function() {
 //     return view('admin.index');
 // })->middleware(['auth', 'verified'])->name('admin.index');
 
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::resource('teachers', TeacherController::class);
+});
 
 
 Route::middleware('auth')->group(function () {

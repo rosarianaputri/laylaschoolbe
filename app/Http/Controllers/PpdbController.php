@@ -16,7 +16,7 @@ class PpdbController extends Controller
 
     public function create(): View
     {
-        return view('frontend.ppdb-form');
+        return view('frontend.ppdb.form');
     }
 
     public function store(Request $request): RedirectResponse

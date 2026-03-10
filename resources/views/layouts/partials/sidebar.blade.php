@@ -65,6 +65,20 @@
                         <span class="nxl-mtext">Contact</span>
                     </a>
                 </li>
+                <li class="nav-item">
+    <li class="nxl-item nxl-hasmenu">
+    <a href="{{ route('teachers.index') }}" class="nxl-link">
+        <span class="nxl-micon"><i class="feather-users"></i></span>
+        <span class="nxl-mtext">Teachers</span>
+    </a>
+</li>
+
+<li class="nxl-item nxl-hasmenu">
+    <a href="{{ route('students.index') }}" class="nxl-link">
+        <span class="nxl-micon"><i class="feather-user"></i></span>
+        <span class="nxl-mtext">Students</span>
+    </a>
+</li>
                 <li class="nxl-item nxl-hasmenu">
                     <a href="{{ route('admin.ppdb.index') }}" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-user-plus"></i></span>

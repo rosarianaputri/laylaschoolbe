@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\SitePageController;
 use App\Http\Controllers\Admin\PpdbController as AdminPpdbController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Admin\StudentController;   
 use App\Http\Controllers\frontend\PpdbController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
@@ -112,10 +113,10 @@ Route::prefix('admin')->name('admin.')->group(function() {
 //     return view('admin.index');
 // })->middleware(['auth', 'verified'])->name('admin.index');
 
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('teachers', TeacherController::class);
+    Route::resource('students', StudentController::class);
 });
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
